@@ -1,0 +1,380 @@
+/* Modern Root Variables */
+:root {
+    --bg-color: #050505;
+    --card-bg: #121212;
+    --accent-color: #00ffcc; /* Neon Cyan */
+    --text-color: #e0e0e0;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+}
+
+/* Background ke liye naya code */
+body {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                url('./background.jpg');
+    /* Upar wali link ek technical circuit board ki image hai */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Agar round shape chahiye */
+}
+
+.github{
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+/* Education Section ke liye alag background */
+#education {
+    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body { 
+    background-color: #0f172a; /* Deep Navy Blue, instead of pure black */
+    color: var(--text-color); 
+    line-height: 1.6; 
+}
+
+/* Navbar background thoda transparent effect */
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px 8%; 
+    background: rgba(15, 23, 42, 0.9); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar */
+nav { 
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px 8%; 
+    align-items: center; 
+    border-bottom: 1px solid #333; 
+}
+
+.logoimg {
+    width: 50px;       /* logo ki width fix kar do */
+    height: auto;      /* height automatically adjust ho jaye */
+    border-radius: 8px; /* optional: thoda rounded look dene ke liye */
+}
+
+nav .logo { 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    color: var(--accent-color);
+    width: 50px; /* Logo ke liye width set kiya */
+    height: 50px; /* Logo ke liye height set kiya */
+}
+nav ul { 
+    display: flex; 
+    list-style: none; 
+}
+/* Navigation Links Default State */
+nav ul li a { 
+    color: #fff; 
+    margin-left: 25px; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    text-transform: uppercase; 
+    
+    /* Naya code effects ke liye */
+    display: inline-block; /* Transform/Scale apply karne ke liye zaroori hai */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation ko smooth banane ke liye */
+}
+
+/* Hover Effect: Jab cursor nav links par aaye */
+nav ul li a:hover { 
+    color: var(--accent-color); /* Neon Cyan color mein badal jayega */
+    transform: scale(1.12);      /* Halka sa (12%) bara ho jayega */
+}
+
+/* Hero Section */
+.hero { 
+    height: 60vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin-top: 45px;
+}
+
+.hero h1 { 
+    font-size: 4rem;
+    margin-bottom: 10px;
+    }
+
+.hero p { 
+    color: var(--accent-color); 
+    font-size: 1.2rem; 
+}
+
+/* Section & Cards */
+section { 
+    padding: 80px 10%; 
+}
+
+h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 40px; 
+    border-left: 4px solid var(--accent-color); 
+    padding-left: 15px; 
+}
+
+.card, .exp-card, .skill-category { 
+    background: var(--card-bg); 
+    padding: 30px; 
+    border-radius: 5px; 
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.card:hover, .exp-card:hover { 
+    border-color: var(--accent-color); 
+}
+
+/* Grids */
+.exp-grid, .skills-grid, .container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+}
+
+/* Footer */
+footer { 
+    text-align: center; 
+    padding: 40px; 
+    background: #000; 
+    border-top: 1px solid #333; 
+}
+
+/* Footer Email Link Color */
+.footer-email {
+    color: #ffffff !important; /* White color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover karne par halka sa glow ya color change */
+.footer-email:hover {
+    color: var(--accent-color) !important; 
+}
+
+/* Footer mein icon aur text ke darmiyan gap */
+footer .footer-content p i {
+    margin-right: 8px;
+    color: var(--accent-color); /* Icon ka color accent rakhne se look acha aayega */
+}
+
+/* Smooth Scroll & Transitions */
+html { 
+    scroll-behavior: smooth; 
+}
+
+/* Hero Animation */
+.hero h1 { 
+    animation: fadeIn 2s; 
+}
+
+/* Card Glow Effect */
+.card, .exp-card, .skill-category { 
+    background: #111; 
+    border: 1px solid #222;
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2); 
+    border-color: var(--accent-color);
+}
+
+.highlight { 
+    color: var(--accent-color); 
+}
+
+button { 
+    background: transparent; color: var(--accent-color); border: 2px solid var(--accent-color); 
+    padding: 15px 30px; margin-top: 20px; cursor: pointer; border-radius: 5px; 
+}
+
+/* Center and Style Social Icons */
+.social-links { 
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; /* Icons ke darmiyan fasla */
+    margin-top: 20px; 
+}
+
+.social-links a { 
+    color: var(--accent-color); /* Neon Cyan color */
+    font-size: 2.5rem;          /* Icons ka size */
+    transition: transform 0.3s ease; 
+}
+
+.social-links a:hover { 
+    transform: scale(1.2);      /* Hover karne par icon thoda bara hoga */
+    color: #ffffff;             /* Hover karne par color white ho jayega */
+}
+
+/* Animation setup */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#typewriter {
+    border-right: 3px solid var(--accent-color);
+    white-space: nowrap;
+    animation: blink-caret 0.75s step-end infinite;
+    padding-right: 5px;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent-color); }
+}
+
+/* Contact Form Styling */
+#ask-question {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-card {
+    background: rgba(30, 41, 59, 0.7); /* Dark card background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.form-instruction {
+    margin-bottom: 25px;
+    color: #cbd5e1;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #38bdf8; /* Cyan blue border highlight on focus */
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.send-btn {
+    background: #0284c7;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.send-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+/* GitHub Button Container */
+.github-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* GitHub Link ko Chota aur Professional Button banane ke liye */
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;                 /* Icon aur text ke darmiyan gap */
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1.05rem;        /* Text ka size bilkul normal aur clean ho jayega */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Sirf Icon ka size thoda bada rakhne ke liye */
+.github-btn i {
+    font-size: 1.4rem; 
+}
+
+/* Hover Effect: Jab cursor button par aaye */
+.github-btn:hover {
+    background: var(--accent-color);
+    color: #0f172a;            /* Hover par text color dark blue ho jayega */
+    transform: translateY(-3px); /* Halka sa upar uthega */
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3); /* Neon glow effect */
+}
